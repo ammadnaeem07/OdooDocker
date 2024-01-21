@@ -1,0 +1,6 @@
+FROM odoo:16
+USER root
+RUN apt update -y
+RUN apt install nano -y
+RUN apt install cups libcups2-dev python3-dev odbc-postgresql unixodbc-dev -y
+RUN pip3 install -U pyodbc pycups pandas dropbox paramiko statsmodels
